@@ -24,7 +24,7 @@
 		
 		let loader = new Three.GLTFLoader();
 		loader.load("model.gltf",function(gltf){
-		scene.add(gltf.scene);
+		scene.add(gltf.model);
 		renderer.render(scene,camera);
 		})
         }
