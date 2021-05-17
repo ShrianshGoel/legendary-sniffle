@@ -21,7 +21,14 @@
           renderer = new Three.WebGlRenderer({antialias:true})
           renderer.setSize(window.innerWidth,window.innerHeight);
           document.body.appendChild(renderer.domElement);
+		
+		let loader = new Three.GLTFLoader();
+		loader.load("model.gltf",function(gltf){
+		scene.add(gltf.scene);
+		renderer.render(scene,camera);
+		})
         }
+	      init();
       </script>
 	
 </body></html>
