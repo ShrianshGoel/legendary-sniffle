@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script src="three.min.js"></script>
+      <script src="GLTFLoader.js"></script>
+      <script>
+		let scene, camera, renderer;
+        
+        function init(){
+        scene = new THREE.Scene();
+          scene.background = new Three.color(0xdddddd);
+          camera =  new Three.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000)
+          
+          hlight = new THREE.AmbientLight (0x404040,100);
+          scene.add(hlight);
+          renderer = new Three.WebGlRenderer({antialias:true})
+          renderer.setSize(window.innerWidth,window.innerHeight);
+          document.body.appendChild(renderer.domElement);
+        }
+      </script>
+	
+</body></html>
